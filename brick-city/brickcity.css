@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+/* <weight>: Use a value from 400 to 700  */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* <weight>: Use a value from 200 to 800 */
+
+.content {
+  padding: 0;
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title-section {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  margin: 45px 0;
+}
+
+.title-section h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.title-section p {
+  margin: 0;
+  max-width: 500px;
+}
+
+/*Back Button*/ 
+.t-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.t-section a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  margin: 0 20px 0 0;
+  padding: 6px 24px 6px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+
+.t-section a span {
+  margin-right: 8px;
+  transform: rotate(50deg);
+  transition: 0.5s ease-in-out;
+}
+
+.t-section a:hover {
+  margin: 0 8px 0 0;
+  background-color: #d4d4d4;
+}
+
+.t-section a:hover span {
+  margin-right: 20px;
+}
+
+/* --------Basic Images Grid-----------*/
+.mcgrid {
+  margin: 0 2rem 10px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 1rem;
+  border-radius: 4px;
+}
+
+.mcgriditem {
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.mcgriditem img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
