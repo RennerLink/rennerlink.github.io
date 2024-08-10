@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+/* <weight>: Use a value from 400 to 700  */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* <weight>: Use a value from 200 to 800 */
+
+.bannervideo {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  max-height: 240px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bannervideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* Page Navigation */
+.page-navigation {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.page-navigation p {
+  margin-bottom: 0;
+}
+
+.page-navigation ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+  line-height: 30px;
+}
+
+.page-navigation li {
+  width: 30px;
+  height: 30px;
+  text-align: center; /* Aligns text horizontally in the box */
+  background-color: white; /* Sets the background color */
+  color: #4d4d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-navigation li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.page-navigation .this-page {
+  border-radius: 3px;
+  box-shadow: -2px -2px 3px #f5f5f5, 2px 2px 3px #e3e3e3;
+  color: black;
+}
+
+.page-navigation .this-page:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+.page-navigation li a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
+/* CARDS */ 
+.card-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Each card style */
+.card {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  padding: 0; /* Remove padding to ensure content fits perfectly */
+  max-width: 350px;
+  min-width: 300px;
+  background-color: #f2f2f2;
+  border-radius: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column; /* Ensure vertical layout */
+  overflow: hidden;
+  transition: ease-in-out 0.4s;
+}
+
+.card:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 6px 12px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Image inside the card */
+.card img {
+  width: 100%;
+  height: 60%; /* Take up top 60% of the card */
+  object-fit: cover; /* Ensure the image covers the container */
+  border-bottom: 2px solid #e3e3e3; /* Optional: to add a separator line */
+}
+
+/* Text container inside the card */
+.card .card-text {
+  padding: 6px 10px 10px 20px;
+  flex-grow: 1; /* Take up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card h4 {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin: 0;
+}
+.card .details {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8em;
+  color: #2b2b2b;
+}
+.card .details p {
+  margin: 0;
+  margin-right: 8px;
+}
+
+/* Adjust for smaller screens to ensure cards fit well */
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+
+/* Youtube Button */ 
+.youtube-link {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.youtube-link::before {
+  content: '';
+  width: 80px;
+  height: 20px;
+  background: #f2f2f2;
+  z-index: 4;
+  transform: translateX(100px);
+  transition: transform 0.3s ease-in;
+}
+.card:hover .youtube-link::before {
+  transform: translateX(20px);
+}
+.youtube-link img {
+  width: 20px; 
+  transition: transform 0.3s ease-in;
+  transform: translateX(90px);
+  z-index: 25;
+  border-bottom: none;
+}
+.youtube-link p {
+  align-items: center;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  z-index: 3;
+  background: red;
+  color: white;
+  font-weight: 500;
+  padding: 4px;
+  padding-left: 14px;
+  border-radius: 0 25px 25px 0;
+  margin: 0;
+  text-decoration: none;
+}
+.youtube-link:hover p {
+  text-decoration: underline;
+}
+.card:hover .youtube-link img {
+  transform: translateX(10px) rotate(-240deg);
+}
+
+.ytl{
+  height: 20px;
+}
