@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+/* <weight>: Use a value from 400 to 700  */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* <weight>: Use a value from 200 to 800 */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.vc-content {  /*Vertically center content*/ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height to ensure centering */
+  margin-left: 230px;
+}
+
+.home-page .content {
+  margin-left: 0;
+}
+
+.section {
+  width: 100%;
+  max-width: 650px;
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.section img {
+  position: relative;
+  height: 100%;
+  /*max-height: 300px;*/
+  transform: scale(1.5);
+  z-index: 1;
+}
+
+.section .text {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  background-color: white;
+  padding: 16px;
+  z-index: 2;
+}
+
+.section .text h2 {
+  margin: 0;
+}
+
+.header {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  padding: 40px 15px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .logo {
+  font-family: "Arimo", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 100px;
+}
+
+.header .nav-container {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.header h2 {
+  font-weight: 500;
+  cursor: default;
+}
+
+.header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 100px 5px;
+  font-weight: 300;
+}
+
+.header ul li {
+  margin-top: 15px;
+}
+
+.header ul li a {
+  text-decoration: none;
+  text-align: left;
+  line-height: 1.6rem;
+  color: black;
+  border-radius: 4px;
+  transition: background-color 0.14s ease;
+  background-color: white;
+}
+
+.header ul li:hover a{
+  color: white;
+  background-color: #292929;
+}
+
+.content {
+  margin-left: 230px;
+  overflow: auto;
+  padding: 30px 50px;
+  padding-right: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* PAGE ADD */
+.page-add {
+  width: calc(100% - 7.6vw);
+  padding: 20px;
+  margin-top: 50px;
+  /*background-color: #e6a7e6;*/
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+@media screen and (min-width: 1350px) {
+    .page-add {
+      width: calc(60% - 7.6vw);
+    }
+}
+
+.page-add .pac-right {
+  min-width: 25vw;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-thumbnail {
+  height: var(--image-collection-height);
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 2px #e6e6e6;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.page-thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.page-add .pac-right h1 {
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.page-add .pac-right p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  max-width: 200px;
+}
+
+.explore {
+  padding: 8px 23px 10px 25px;
+  width: max-content;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: left;
+  text-wrap: nowrap;
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+  transition: padding 0.2s ease;
+}
+
+.explore:hover {
+  padding: 8px 26px 10px 28px;
+}
+
+.explore img {
+  max-height: 1rem;
+  margin-left: 10px;
+  transform: translateY(2px);
+}
+
+/*PAGE LOADER*/ 
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  background-color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-loader-hidden {
+  display: none;
+}
+
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+  margin: 36px;
+  display: grid;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  background: #0c236e;
+  clip-path: polygon(0 0,101% 0, 0 100%);
+  animation: l13 2s infinite;
+}
+.loader::after {
+  --s:-1,-1;
+}
+@keyframes l13 {
+    0%,
+    10%  {transform:scale(var(--s,1)) translate(0,0)        rotate(0deg)}
+    33%  {transform:scale(var(--s,1)) translate(20px,-20px) rotate(0deg)}
+    66%  {transform:scale(var(--s,1)) translate(20px,-20px) rotate(180deg)}
+    90%,
+    100% {transform:scale(var(--s,1)) translate(0px,0px)    rotate(180deg)}
+}
+
+/* PAGE CARDS */ 
+.page-container {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;   /* Space between cards */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;/* Adjust padding as needed */
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.page-card {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+  border-radius: 8px;
+  width: 400px; /* You can adjust the card width as needed */
+  aspect-ratio: 2 / 1; /* Aspect ratio of 1/2 horizontally, adjust as needed */
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.page-card:hover {
+  transform: scale(1.05);
+}
+
+.page-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px; /* Space between image and text */
+  flex-shrink: 0;
+}
+
+.page-card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page-card h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.page-card p {
+  margin: 0;
+}
