@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/svg" href="../favicon.svg">
+  <title>RL Buildings</title>
+  <link href="../main.css" rel="stylesheet" type="text/css" />
+  <link href="../buildings/buildings.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <a class="logo" href="../index.html">RL</a>
+      <div class="nav-container">
+        <h2 class="scale-text">Creative Projects</h2>
+        <ul>
+          <li><a href="">Buildings</a></li>
+          <li><a href="../photography/photo.html">Photography</a></li>
+          <li><a href="../animation/index.html">Animation</a></li>
+          <li><a href="../Mechanical-Engineering/meng.html">Mechanical Engineering</a></li>
+        </ul>
+        <h2 class="scale-text">Information</h2>
+        <ul>
+          <li><a href="../About-Me/about-me.html">About Me</a></li>
+          <li><a href="../About-this-site/index.html">About This Site</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="title">
+      <h1>Minecraft Buildings</h1>
+      <p class="subtitle">All creations below were built in survival mode where you are bounded by gravity and navigate the world from a first person perspective.</p>
+    </div>
+    <div class="slideshow-container">
+      <img class="arrow image-left" src="../image-assets/free-arrow-left-icon-3099-thumb.png">
+      <div class="image-collection">
+        <img data-src="../buildings/thumnail-images/IMG_2416.png">
+        <img data-src="../buildings/thumnail-images/IMG_2417.png">
+        <img data-src="../buildings/thumnail-images/IMG_2419.png">
+        <img data-src="../buildings/thumnail-images/IMG_2418.png">
+        <img data-src="../buildings/thumnail-images/IMG_2420.png">
+        <img data-src="../buildings/thumnail-images/IMG_2421.png">
+        <img data-src="../buildings/thumnail-images/IMG_2422.png">
+        <img data-src="../buildings/thumnail-images/IMG_2423.png">
+        <img data-src="../buildings/thumnail-images/IMG_2424.png">
+        <img data-src="../buildings/thumnail-images/IMG_2425.png">
+        <img data-src="../buildings/thumnail-images/IMG_2426.png">
+        <img data-src="../buildings/thumnail-images/IMG_2427.png">
+        <img data-src="../buildings/thumnail-images/IMG_2428.png">
+        <img data-src="../buildings/thumnail-images/IMG_2429.png">
+        <img data-src="../buildings/thumnail-images/IMG_2430.png">
+        <img data-src="../buildings/thumnail-images/IMG_2431.png">
+        <img data-src="../buildings/thumnail-images/IMG_2432.png">
+        <img data-src="../buildings/thumnail-images/IMG_2433.png">
+        <img data-src="../buildings/thumnail-images/IMG_2434.png">
+        <img data-src="../buildings/thumnail-images/IMG_2435.png">
+        <img data-src="../buildings/thumnail-images/IMG_2436.png">
+      </div>
+      <img class="arrow image-right" src="../image-assets/free-arrow-right-icon-3098-thumb.png">
+    </div>
+    <div class="image-indicator">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <br><br><br><br>
+    
+    <div class="page-card" onclick="window.location.href = '../brick-city/brickcity.html'">
+      <img class="page-thumbnail" src="../buildings/BrickCityThumbnail.jpg" alt="Placeholder">
+      <div class="page-card-text">
+        <h3>Brick City</h3>
+        <p>Learn more about the city I build out of LEGO pieces!</p>
+      </div>
+    </div>
+
+    <!--<div class="page-add">
+      <div class="pac-left">
+        <div class="page-thumbnail">
+          <img src="../buildings/BrickCityThumbnail.jpg" alt="Brick City Image">
+        </div>
+      </div>
+      <div class="pac-right">
+        <h1>Brick City</h1>
+        <p>Learn more about the city I build out of LEGO pieces!</p>
+        <a class="explore" href="../brick-city/brickcity.html" target="_blank">Explore<img src="../image-assets/external-link.svg" alt="Link to external site"></a>
+      </div>
+    </div>-->
+
+    <div class="page-loader">
+      <h1>Assembling your webpage...</h1>
+      <div class="loader"></div>
+      <p>Images will be full resolution!</p>
+    </div>
+      
+  </div>
+    
+  <script>
+    function updateImageCollectionHeight() {
+      const imageCollection = document.querySelector('.image-collection');
+      if (imageCollection) {
+        const height = imageCollection.offsetHeight;
+        document.documentElement.style.setProperty('--image-collection-height', `${height}px`);
+      }
+    }
+    function hidePageLoader() {
+      const pageLoader = document.querySelector('.page-loader');
+      if (pageLoader) {
+        pageLoader.classList.add('page-loader-hidden');
+      }
+    }
+    function loadImageAndSetHeight(callback) {
+      const images = document.querySelectorAll('.image-collection img');
+      let imagesLoaded = 0;
+      const checkAllImagesLoaded = () => {
+        if (imagesLoaded === images.length) {
+          updateImageCollectionHeight();
+          hidePageLoader();
+          callback();
+        }
+      };
+      images.forEach((img) => {
+        img.onload = () => {
+          imagesLoaded++;
+          checkAllImagesLoaded();
+        };
+        img.onerror = () => {
+          imagesLoaded++; // handle error by counting the image as loaded
+          checkAllImagesLoaded();
+        };
+        img.setAttribute('src', img.getAttribute('data-src'));
+      });
+    }
+    function initializeSlideshow() {
+      const indicators = document.querySelectorAll('.image-indicator span');
+      let selectedIndex = 4; // Start with the 5th image
+      const images = document.querySelectorAll('.image-collection img');
+      const updateVisuals = () => {
+        images.forEach((img, index) => {
+          img.classList.remove('selected', 'hidden');
+          if (index === selectedIndex) {
+            img.classList.add('selected');
+          } else {
+            img.classList.add('hidden');
+          }
+        });
+        indicators.forEach((indicator, index) => {
+          indicator.classList.remove('active');
+          if (index === selectedIndex) {
+            indicator.classList.add('active');
+          }
+        });
+      };
+      updateVisuals();
+      const rotateImages = () => {
+        selectedIndex = (selectedIndex + 1) % images.length;
+        updateVisuals();
+      };
+      const intervalID = setInterval(rotateImages, 5500); // Rotate every 5.5 seconds
+      document.querySelector('.image-right').addEventListener('click', () => {
+        selectedIndex = (selectedIndex + 1) % images.length;
+        updateVisuals();
+        intervalID && clearInterval(intervalID);
+      });
+      document.querySelector('.image-left').addEventListener('click', () => {
+        selectedIndex = (selectedIndex - 1 + images.length) % images.length;
+        updateVisuals();
+        intervalID && clearInterval(intervalID);
+      });
+      document.querySelectorAll('.arrow').forEach((arrow) =>
+        arrow.addEventListener('click', () => clearInterval(intervalID))
+      );
+    }
+    // Dynamically adjust the height on page resize
+    window.addEventListener('resize', updateImageCollectionHeight);
+    document.addEventListener('DOMContentLoaded', () => {
+      loadImageAndSetHeight(initializeSlideshow);
+    });
+  </script>
+</body>
+</html>
