@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+
+/* --------about-------- */
+#about {
+  position: relative;
+  padding: 80px 0;
+  color: #888;
+  font-family: 'poppins', sans-serif;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutcol1 {
+  flex-basis: 35%;
+  max-width: 385px;
+}
+
+.aboutcol1 img {
+  flex-basis: 35%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.aboutcol2 {
+  flex-basis: 60%;
+}
+
+.aboutcol2 p {
+  max-width: 650px;
+}
+
+.subtitle {
+  font-size: 60px;
+  font-weight: 600;
+  color: black;
+}
+
+.subtitlefix {
+  margin-top: 0;
+}
+
+.subtitlecenter {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  color: black;
+}
+
+.tabtitles {
+  display: flex;
+  color: #666;
+  margin: 20px 0 40px;
+}
+
+.tablinks {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tablinks::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: #0c236e;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tablinks.activelink::after {
+  width: 50%;
+}
+
+.tabcontents ul li {
+  list-style: none;
+  color: #888;
+  margin: 10px 0;
+}
+
+.tabcontents ul li span {
+  color: #0c236e;
+  font-size: 14px;
+}
+
+.tabcontents {
+  display: none;
+}
+
+.tabcontents.activetab {
+  display: block;
+}
+
+
+/* --------Contact-------- */
+#contact {
+  margin: 0 80px;
+}
+
+.contactleft {
+  flex-basis: 35%;
+  font-family: 'poppins', sans-serif;
+}
+
+.contactright {
+  flex-basis: 60%;
+  font-family: 'poppins', sans-serif;
+}
+
+.contactleft p {
+  margin-top: 30px;
+}
+
+.contactleft p i {
+  color: #0c236e;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.socialicons {
+  margin-top: 30px;
+}
+
+.socialicons a {
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 30px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.socialicons a:hover {
+  color: #0c236e;
+  transform: translateY(-5px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background-color: #0c236e;
+}
+
+.contactright form {
+  max-width: 650px;
+  font-family: 'poppins', sans-serif;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-color: #f3f3f3;
+  padding: 15px;
+  margin: 15px 0;
+  color: black;
+  font-size: 18px;
+  border-radius: 6px;
+  resize: none;
+}
+
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.cardbtn {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #f7f9fb;
+  border-radius: 6px;
+  transition: all 0.4s ease 0s;
+  color: #000;
+  border: 2px solid #000;
+  cursor: pointer;
+
+.cardbtn:hover {
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+}

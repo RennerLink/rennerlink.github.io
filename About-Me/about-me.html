@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/svg" href="../favicon.svg">
+  <title>RL About Me</title>
+  <link href="../main.css" rel="stylesheet" type="text/css" />
+  <link href="../About-Me/about-me.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/dc1447e003.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="header">
+      <a class="logo" href="../index.html">RL</a>
+      <div class="nav-container">
+        <h2 class="scale-text">Creative Projects</h2>
+        <ul>
+          <li><a href="../buildings/buildings.html">Buildings</a></li>
+          <li><a href="../photography/photo.html">Photography</a></li>
+          <li><a href="../animation/index.html">Animation</a></li>
+          <li><a href="../Mechanical-Engineering/meng.html">Mechanical Engineering</a></li>
+        </ul>
+        <h2 class="scale-text">Information</h2>
+        <ul>
+          <li><a href="">About Me</a></li>
+          <li><a href="../About-this-site/index.html">About This Site</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- -----------about----------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="aboutcol1">
+            <img src="../About-Me/AboutMePortfolioImage.jpeg">
+          </div>
+          <div class="aboutcol2">
+            <h1 class="subtitle">About Me</h1>
+            <p>I am currently a senior in high school near Portland, Oregon.  I have always been a builder, visualizing projects in 3D and then making them come to life with blocks or LEGO® products.  Along with my own creations, I've always had a fascination with building design and enjoy exploring and photographing the urban Portland landscape.  In 2023, I was able to participate in the ACE Mentor Program and take a course in engineering and design.  When I am not building new creations or documenting my builds for my YouTube channel, I am exploring Portland on my bike or playing soccer.</p>
+
+            <div class="tabtitles">
+              <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+              <p class="tablinks" onclick="opentab('experience')">Experience</p>
+              <!--<p class="tablinks" onclick="opentab('hobbies')">Hobbies</p>-->
+            </div>
+            <div class="tabcontents activetab" id="skills">
+              <ul>
+                <li><span>Visual Design</span><br>Websites, Infographics, Videos, Slideshows</li>
+                <li><span>Visual Conception</span><br>I can easily think up objects or entire environments in 3D</li>
+                <li><span>Problem Solving</span><br>Finding creative solutions to everyday problems</li>
+              </ul>
+            </div>
+            <div class="tabcontents" id="experience">
+              <ul>
+                <li><span>2023 & 2024</span><br>ACE Mentorship</li>
+                <li><span>Spring 2022</span><br>OSRO Soccer Referee</li>
+                <li><span>Summer 2020</span><br>Started a neighborhood bottle recycling service with a friend</li>
+              </ul>
+            </div>
+            <!--<div class="tabcontents" id="hobbies">
+              <ul>
+                <li><span>Custom Lego Builds</span><br>Been building since age 7.</li>
+                <li><span>Content Creation</span><br>Bringing together a community on Youtube since 2017.</li>
+                <li><span>Soccer</span><br>In games and in practice.</li>
+                <li><span>Cycling</span><br>Long rides around Portland and the metro area.</li>
+              </ul>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------contact------------ -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contactleft">
+            <h1 class="subtitle subtitlefix">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i> rennerlinkpdx@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i> (971) 990-5968</p>
+            <p><i class="fa-solid fa-circle-info"></i> Curious about how I developed this website? <a href="/about-this-site" class="hl">Click here</a>.</p>
+            <!--<br><br><a href="images/RennerLinkResume_2023.pdf" download class="cardbtn">Download CV</a>-->
+          </div>
+          <div class="contactright">
+            <form class="contact-form">
+              <!-- <input type="text" name="Name" placeholder="Your Name" required> -->
+              <input type="text" name="Subject" class="contact-subject" placeholder="Your Subject">
+              <textarea name="Message" class="contact-message" rows="6" placeholder="Your Message" required></textarea>
+              <button type="submit" class="cardbtn contact-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div><br><br><br><br>
+  </div>
+
+  <div class="page-loader">
+    <h1>Assembling your webpage...</h1>
+    <div class="loader"></div>
+    <p>Images will be full resolution!</p>
+  </div>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tablinks");
+    var tabcontents = document.getElementsByClassName("tabcontents");
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("activelink");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("activetab");
+      }
+      event.currentTarget.classList.add("activelink");
+      document.getElementById(tabname).classList.add("activetab");
+    }
+
+    // Contact
+    const contactForm = document.querySelector('.contact-form');
+    // const contactBtn = document.querySelector('.contact-btn');
+    const contactSubject = document.querySelector('.contact-subject');
+    const contactMessage = document.querySelector('.contact-message');
+
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      window.open(`mailto:rennerlinkpdx@gmail.com?subject=${encodeURIComponent(contactSubject.value)}&body=${encodeURIComponent(contactMessage.value)}`, "_blank").focus();
+    });
+
+
+    window.onload = function() {
+        const pageLoader = document.querySelector('.page-loader');
+        if (pageLoader) {
+            pageLoader.classList.add('page-loader-hidden');
+        }
+    };
+  </script>
+</body>
+
+</html>
