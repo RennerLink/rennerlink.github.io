@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+/* <weight>: Use a value from 400 to 700  */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* <weight>: Use a value from 200 to 800 */
+
+.bannervideo {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  max-height: 240px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bannervideo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* Page Navigation */
+.page-navigation {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.page-navigation p {
+  margin-bottom: 0;
+}
+
+.page-navigation ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+  line-height: 30px;
+}
+
+.page-navigation li {
+  width: 30px;
+  height: 30px;
+  text-align: center; /* Aligns text horizontally in the box */
+  background-color: white; /* Sets the background color */
+  color: #4d4d4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-navigation li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.page-navigation .this-page {
+  border-radius: 3px;
+  box-shadow: -2px -2px 3px #f5f5f5, 2px 2px 3px #e3e3e3;
+  color: black;
+}
+
+.page-navigation .this-page:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+.page-navigation li a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
+/* CARDS */ 
+.crd-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Each card style */
+.crd {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  max-width: 700px; /* Adjustable */
+  background-color: #f2f2f2;
+  display: flex; /* Horizontal layout */
+  overflow: hidden;
+  transition: ease-in-out 0.4s;
+}
+.crd:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 6px 12px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.crd img {
+  width: 50%; /* Takes up 50% of the card width */
+  height: 100%; /* Takes up 100% of the height */
+  object-fit: cover; /* Ensures the image covers the container */
+  border-right: 2px solid #e3e3e3; /* Optional separator line */
+  z-index: 35;
+}
+.text-container {
+  width: 50%; /* Takes up the remaining 50% width of the card */
+  padding: 10px; /* Padding adjustment */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-container h2 {
+  margin-bottom: 0;
+}
+.text-container p {
+  margin-top: 0.5em;
+}
+
+/* Youtube Button */ 
+.youtube-link {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.youtube-link::before {
+  content: '';
+  width: 80px;
+  height: 20px;
+  background: #f2f2f2;
+  z-index: 4;
+  transform: translateX(100px);
+  transition: transform 0.3s ease-in;
+}
+.crd:hover .youtube-link::before {
+  transform: translateX(-20px); /* Adjust transformation for the new layout */
+}
+.youtube-link img {
+  width: 20px;
+  transition: transform 0.3s ease-in;
+  transform: translateX(90px); /* Adjust transformation */
+  z-index: 25;
+  border-right: none;
+}
+.youtube-link p {
+  align-items: center;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  z-index: 3;
+  background: red;
+  color: white;
+  font-weight: 500;
+  padding: 4px;
+  padding-left: 14px;
+  border-radius: 0 25px 25px 0;
+  margin: 0;
+  text-decoration: none;
+}
+.youtube-link:hover p {
+  text-decoration: underline;
+}
+.crd:hover .youtube-link img {
+  transform: translateX(10px) rotate(-240deg); /* Accurate rotation and translation */
+}
+
+/* Youtube Button */ 
+.media-link {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.media-link::before {
+  content: '';
+  width: 80px;
+  height: 20px;
+  background: #f2f2f2;
+  z-index: 4;
+  transform: translateX(100px);
+  transition: transform 0.4s ease-in;
+}
+.crd:hover .media-link::before {
+  transform: translateX(-20px); /* Adjust transformation for the new layout */
+}
+.media-link img {
+  width: 20px;
+  transition: transform 0.4s ease-in;
+  transform: translateX(90px); /* Adjust transformation */
+  z-index: 25;
+  border-right: none;
+}
+.media-link p {
+  align-items: center;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  z-index: 3;
+  background: #f1ad32ff;
+  color: white;
+  font-weight: 500;
+  padding: 4px;
+  padding-left: 14px;
+  border-radius: 0 25px 25px 0;
+  margin: 0;
+  text-decoration: none;
+}
+.media-link:hover p {
+  text-decoration: underline;
+}
+.crd:hover .media-link img {
+  transform: translateX(10px) rotate(-360deg); /* Accurate rotation and translation */
+}
