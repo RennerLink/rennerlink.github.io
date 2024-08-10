@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* <weight>: Use a value from 200 to 800 */
+
+.page-loader .dark-pl {
+  color: white;
+  background-color: #1e1f24;
+}
+
+.banner {
+  border-radius: 8px;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+.content {
+  height: 100vh;
+  padding: 30px 70px 30px 50px;
+}
+
+.title-section {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  cursor: default;
+  margin-bottom: 30px;
+}
+
+.title-section.main-title {
+  position: relative;
+  background-color: white;
+}
+.title-section.main-title::before,
+.title-section.main-title::after,
+.corner::before,
+.corner::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 10;
+  transform: translateY(-5px); /* Shift up by 10px */
+}
+.title-section.main-title::before {
+  top: 0;
+  left: -15px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+}
+.title-section.main-title::after {
+  bottom: -25px;
+  right: -15px;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+}
+.corner.top-right::before {
+  top: 0;
+  right: -15px;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+}
+.corner.bottom-left::after {
+  bottom: -25px;
+  left: -15px;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+}
+.title-wrapper {
+  position: relative;
+}
+
+.title-section h2::after {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 1px;
+  background-color: #5a5c68;
+  margin: 16px 0 0 0;
+}
+
+.hrz-container {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-menu {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 12px;
+}
+
+.gallery-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  max-width: 350px;
+}
+
+.gallery-card:hover {
+  cursor: pointer;
+  align-items: center;
+}
+
+.glass-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0);
+  transition:  0.3s;
+}
+
+.gallery-card:hover .glass-filter {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  --webkit-backdrop-filter: blur(5px);
+}
+
+.gallery-card img {
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.gallery-card h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 40px;
+  transform: rotate(45 degrees);
+  z-index: 3;
+}
+
+/* Gallery Image Grid */ 
+.gallery-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 26px;
+}
+.gallery-container a {
+  display: block;
+}
+.gallery-container img {
+  width: 100%;
+  max-width: 400px;
+}

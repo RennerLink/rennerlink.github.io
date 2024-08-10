@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/svg" href="../favicon.svg">
+  <title>RL Photo Menu</title>
+  <link href="../main.css" rel="stylesheet" type="text/css" />
+  <link href="../brick-city/brickcity.css" rel="stylesheet" type="text/css" />
+  <link href="../photography/photo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <a class="logo" href="../index.html">RL</a>
+      <div class="nav-container">
+        <h2 class="scale-text">Creative Projects</h2>
+        <ul>
+          <li><a href="../buildings/buildings.html">Buildings</a></li>
+          <li><a href="">Photography</a></li>
+          <li><a href="../animation/index.html">Animation</a></li>
+          <li><a href="../Mechanical-Engineering/meng.html">Mechanical Engineering</a></li>
+        </ul>
+        <h2 class="scale-text">Information</h2>
+        <ul>
+          <li><a href="../About-Me/about-me.html">About Me</a></li>
+          <li><a href="../About-this-site/index.html">About This Site</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+
+    <div class="banner">
+      <video id="background-video" autoplay loop muted>
+        <source src="../photography/photopreview.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="title-section main-title">
+        <div class="title-wrapper">
+            <h1>Photography</h1>
+            <p>Been taking photos with smartphones since 2020.</p>
+        </div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+    </div>
+
+    <div class="title-section">
+      <h2>Browse by Category</h2>
+    </div>
+
+    <div class="hrz-container">
+      <div class="gallery-menu">
+        <div class="gallery-card" onclick="window.location.href = '../photography/city/cityphoto.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/photo-gallery-thumnails/IMG_5936.jpg">
+          <h3>City</h3>
+        </div>
+        <div class="gallery-card" onclick="window.location.href = '../photography/nature/nature.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/photo-gallery-thumnails/IMG_5293.jpg">
+          <h3>Nature</h3>
+        </div>
+        <div class="gallery-card">
+          <div class="glass-filter"></div>
+          <img src="../photography/photo-gallery-thumnails/DJI_0101 (1).JPG">
+          <h3>Landscape</h3>
+        </div>
+        <div class="gallery-card" onclick="window.location.href = '../photography/abstract/abstract.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/abstract/images/a77.jpeg">
+          <h3>Abstract</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="title-section">
+      <h2>Browse by Album</h2>
+    </div>
+
+    <div class="hrz-container">
+      <div class="gallery-menu">
+        <div class="gallery-card" onclick="window.location.href = '../photography/dogs/dogs.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/dogs/images/d55.jpeg">
+          <h3>Dogs</h3>
+        </div>
+        <div class="gallery-card" onclick="window.location.href = '../photography/sunset/sunset.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/sunset/images/s14.jpeg">
+          <h3>Sunsets<br>& Sunrise</h3>
+        </div>
+        <div class="gallery-card" onclick="window.location.href = '../photography/rainy-days/rain.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/rainy-days/images/r5.jpeg">
+          <h3>Flowers</h3>
+        </div>
+        <div class="gallery-card" onclick="window.location.href = '../photography/explore/explore.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/explore/images/e24.jpeg">
+          <h3>Exploring</h3>
+        </div>
+        <div class="gallery-card" onclick="window.location.href = '../photography/flowers/flowers.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/flowers/images/f20.jpeg">
+          <h3>Rainy Days</h3>
+        </div>
+        <div class="gallery-card" onclick="window.location.href = '../photography/portland-timbers/ptfc.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/portland-timbers/images/t19.jpeg">
+          <h3>Portland Timbers</h3>
+        </div>
+        <div class="gallery-card" onclick="window.location.href = '../photography/lg/lg.html'">
+          <div class="glass-filter"></div>
+          <img src="../photography/lg/images/x24.jpeg">
+          <h3>LEGO</h3>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="page-loader">
+      <h1>Assembling your webpage...</h1>
+      <div class="loader"></div>
+      <p>Images will be full resolution!</p>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const pageLoader = document.querySelector('.page-loader');
+      if (pageLoader) {
+        // Set a timeout of 3 seconds (3000 milliseconds) to hide the page loader
+        setTimeout(function() {
+          // This line directly sets the display style to 'none' to hide the loader
+          pageLoader.style.display = 'none';
+        }, 3000); // 3000 milliseconds = 3 seconds
+      }
+    });
+  </script>
+</body>
+</html>
