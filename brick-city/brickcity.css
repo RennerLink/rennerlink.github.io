@@ -98,3 +98,14 @@
   height: 100%;
   object-fit: cover;
 }
+
+/*General In Text Links*/
+a.intextlink {
+  color: rgb(26, 196, 26);
+  transition-duration: 0.3s;
+}
+
+a.intextlink:hover {
+  background-color: rgb(218, 218, 218);
+  color: black;
+}
