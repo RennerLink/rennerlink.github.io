@@ -66,7 +66,7 @@ const tab = ref(0);
   height: 0.25rem;
   background: #028;
   transition: width 0.25s ease-in-out;
-  margin-top: 1px;
+  margin-top: 0.15rem;
 }
 
 .tabTitles > span.selected::after {
