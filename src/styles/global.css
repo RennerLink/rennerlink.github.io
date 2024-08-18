@@ -1,0 +1,9 @@
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans Variable", sans-serif;
+}
+
+main {
+  margin-left: 12rem;
+}

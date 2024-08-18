@@ -1,0 +1,28 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.about > img {
+  width: 14.5rem;
+  border-radius: 1rem;
+}
+
+.aboutText {
+  width: 50rem;
+}
+
+.aboutText > h2 {
+  font-size: 1.5rem;
+}
+
+.aboutText > p {
+  font-size: 1.1rem;
+}

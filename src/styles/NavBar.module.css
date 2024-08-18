@@ -1,0 +1,50 @@
+.navbar {
+  height: 100vh;
+  width: 12rem;
+  position: fixed;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.15rem;
+}
+
+.logo {
+  font-family: "Arimo Variable", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  margin-left: 0.5rem;
+}
+
+.heading { 
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.linksection {
+  margin-top: 1rem;
+  font-weight: 300;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.link {
+  text-decoration: none;
+  line-height: 1.6rem;
+  color: #000;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.link:hover {
+  background: #000;
+  color: #fff;
+}

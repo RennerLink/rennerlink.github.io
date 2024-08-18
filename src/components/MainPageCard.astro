@@ -1,0 +1,23 @@
+---
+import styles from '../styles/MainPageCard.module.css';
+
+interface Props {
+  img: {
+    src: string;
+    alt: string;
+  }
+  title: string;
+  body: string;
+  url: string;
+}
+
+const { img, title, body, url } = Astro.props;
+---
+
+<a class={styles.card} href={url}>
+  <img src={img.src} alt={img.alt} />
+  <div class={styles.text}>
+    <h2>{title}</h2>
+    <p>{body}</p>
+  </div>
+</a>
