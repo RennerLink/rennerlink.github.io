@@ -1,7 +1,7 @@
 *, *::before, *::after {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Plus Jakarta Sans Variable", sans-serif;
+  font-family: "Plus Jakarta Sans Variable", Arial, Helvetica, sans-serif;
 }
 
 main {
