@@ -1,12 +1,13 @@
 .navbar {
   height: 100vh;
   width: 14rem;
-  position: fixed;
+  position: fixed; 
   padding-right: 1rem;
   padding-left: 1rem;
   display: flex;
   flex-direction: column;
   font-size: 1.15rem;
+  background: #fff;
 }
 
 .logo {

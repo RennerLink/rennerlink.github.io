@@ -4,10 +4,11 @@ import { ref } from 'vue';
 const { tabs } = defineProps<{
   tabs: {
     title: string,
-    sections: {
+    sections?: {
       title: string,
       body: string
-    }[]
+    }[],
+    slotName?: string
   }[]
 }>();
 
@@ -20,10 +21,11 @@ const selectedTab = ref(0);
       <span v-for="(tab, i) in tabs" @click="selectedTab = i" :class="{selected: selectedTab == i}">{{tab.title}}</span>
     </div>
     <div v-for="(tab, i) in tabs" class="content" v-show="selectedTab == i">
-      <template v-for="section in tab.sections">
+      <template v-if="tab.sections != null" v-for="section in tab.sections">
         <h4>{{section.title}}</h4>
         <p>{{section.body}}</p>
       </template>
+      <slot v-if="tab.slotName != null" :name="tab.slotName" />
     </div>
   </div>
 </template>
