@@ -2,6 +2,7 @@
   "name": "",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@9.7.1+sha256.46f1bbc8f8020aa9869568c387198f1a813f21fb44c82f400e7d1dbde6c70b40",
   "scripts": {
     "dev": "astro dev --host",
     "start": "astro dev --host",

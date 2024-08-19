@@ -4,18 +4,7 @@ import style from '@styles/animation.module.css';
 import ContentCard from '@components/ContentCard.astro';
 import { getCollection } from 'astro:content';
 
-interface Entry {
-  data: {
-    title: string,
-    date: Date,
-    length: number,
-    alt: string,
-    yt: string
-  },
-  id: string
-}
-
-const entries: Entry[] = (await getCollection('animations')).sort((a, b) => b.data.date - a.data.date);
+const entries = (await getCollection('animations')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Layout title="RL Animation">
   <div class={style.banner}>
@@ -25,6 +14,6 @@ const entries: Entry[] = (await getCollection('animations')).sort((a, b) => b.da
   </div>
   <h1 class={style.title}>Animation</h1>
   <div class={style.cards}>
-    {entries.map(entry => <ContentCard img={`/animation/thumbnails/${entry.id.split('.md')[0]}.avif`} title={entry.data.title} date={entry.data.date} length={entry.data.length} alt={entry.data.alt} url={`/animation/${entry.id.split('.md')[0]}/`} />)}
+    {entries.map(entry => <ContentCard img={`/animation/thumbnails/${entry.slug}.avif`} title={entry.data.title} date={entry.data.date} length={entry.data.length} alt={entry.data.alt} url={`/animation/${entry.slug}/`} />)}
   </div>
 </Layout>
