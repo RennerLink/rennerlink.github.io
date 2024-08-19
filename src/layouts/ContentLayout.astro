@@ -1,0 +1,39 @@
+---
+import '@fontsource-variable/plus-jakarta-sans';
+import '@styles/global.css';
+import NavBar from '@components/NavBar.astro';
+import style from '@styles/ContentLayout.module.css';
+
+interface Props {
+  frontmatter: {
+    title: string,
+    alt: string,
+    date: Date,
+    length: number,
+    yt: string
+  }
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Renner Link's Portfolio Website." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>RL Animations - {frontmatter.title}</title>
+	</head>
+  <body>
+    <NavBar />
+    <main>
+      <h1 class={style.title}>{frontmatter.title}</h1>
+      <iframe src={`https://www.youtube.com/embed/${frontmatter.yt}`} title={frontmatter.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class={style.embed} /> 
+      <slot />
+    </main>
+	</body>
+</html>

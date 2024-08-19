@@ -1,0 +1,29 @@
+---
+import style from '@styles/contact.module.css';
+import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+import EmailForm from '@components/EmailForm.vue';
+---
+
+<Layout title="RL Contact">
+  <div class={style.contact}>
+    <div class={style.left}>
+      <h1>Contact Me</h1>
+      <span>
+        <Icon name="ph:paper-plane-tilt-fill" />
+        rennerlinkpdx@gmail.com
+      </span>
+      <span>
+        <Icon name="ph:phone-fill" />
+         (971) 990-5968
+      </span>
+      <span>
+        <Icon name="ph:youtube-logo-fill" />
+        @BrickImperial
+      </span>
+    </div>
+    <div class={style.right}>
+      <EmailForm client:load />
+    </div>
+  </div>
+</Layout>

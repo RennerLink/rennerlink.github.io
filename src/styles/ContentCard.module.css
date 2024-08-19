@@ -1,0 +1,30 @@
+.card {
+  border-radius: 1rem;
+  width: 24rem;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  background: #fafafa;
+}
+
+.card > img {
+  width: 24rem;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.timeinfo {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.text {
+  padding: 2rem;
+  padding-top: 1.5rem;
+}
+
+.card:hover {
+  transform: rotateX(15deg) translateZ(3.5rem);
+  box-shadow: 0 0 2rem rgba(0,0,0,0.6);
+}

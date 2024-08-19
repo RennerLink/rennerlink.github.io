@@ -1,0 +1,27 @@
+---
+import style from '@styles/ContentCard.module.css';
+
+interface Props {
+  img: string;
+  title: string;
+  date: Date;
+  length: number;
+  desc?: string;
+  url: string;
+  alt: string
+}
+
+const { img, title, date, length, desc, url, alt } = Astro.props;
+---
+
+<a href={url} class={style.card}>
+  <img src={img} alt={alt} />
+  <div class={style.text}>
+    <h3>{title}</h3>
+    <div class={style.timeinfo}>
+      <span>{date.getFullYear()}-{(date.getMonth() + 1).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}-{(date.getDate() + 1).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}</span>
+      <span>{Math.floor(length / 60)}:{length % 60}</span>
+    </div>
+    {desc ? <p>{desc}</p> : ''}
+  </div>
+</a>

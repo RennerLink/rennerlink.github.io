@@ -1,0 +1,18 @@
+.embed {
+  width: calc(100% - 50rem);
+  margin-left: 25rem;
+  margin-top: 2rem;
+  border: none;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+}

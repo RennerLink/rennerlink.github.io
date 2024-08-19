@@ -1,0 +1,34 @@
+.contact {
+  padding: 2rem;
+  padding-top: 3.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact h1 {
+  font-size: 4rem
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+[data-icon] {
+  font-size: 4rem;
+  color: #026;
+}
+
+.left > span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.right {
+  margin-top: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
