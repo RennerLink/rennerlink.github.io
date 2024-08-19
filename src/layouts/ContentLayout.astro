@@ -33,7 +33,9 @@ const { frontmatter } = Astro.props;
     <main>
       <h1 class={style.title}>{frontmatter.title}</h1>
       <iframe src={`https://www.youtube.com/embed/${frontmatter.yt}`} title={frontmatter.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class={style.embed} /> 
-      <slot />
+      <div class={style.md}>
+        <slot />
+      </div>
     </main>
 	</body>
 </html>

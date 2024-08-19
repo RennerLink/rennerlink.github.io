@@ -8,11 +8,19 @@
   overflow: hidden;
 }
 
-main h1, main h2, main h3, main h4, main h5, main h6 {
-  text-align: center;
-  margin-top: 2rem;
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 { 
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .title {
+  text-align: center;
   font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.md {
+  width: calc(100% - 50rem);
+  margin-left: 25rem;
+  font-size: 1.25rem;
 }
