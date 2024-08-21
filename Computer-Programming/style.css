@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+.grey {
+    background-color: #dde1e7;
+}
+
+.header ul li a.greylink {
+    background-color: #dde1e7;
+}
+
+.header ul li:hover .greylink {
+    background-color: black;
+}
+
+.content {
+    background-color: #dde1e7;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.inwall {
+    text-align: center;
+}
+
+h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+    max-width: 550px;
+    margin-top: 0;
+}
+
+.house {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 18px;
+}
+
+.wall {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  justify-content: center;
+  gap: 22px; /* Adjust the gap between cards as needed */
+}
+
+.tile {
+  max-width: 260px;
+  height: 420px;
+  box-shadow: inset -5px -5px 9px rgba(255,255,255,0.45), inset 5px 5px 9px rgba(94,104,121,0.3);
+  padding: 30px; /* Optional: Add padding inside the cards */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  transition-duration: 1s ease;
+}
+
+.tile:hover {
+    cursor: pointer;
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+}
+
+.tile img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Ensures the image is a square */
+  object-fit: cover; /* Ensures the image covers the entire area */
+}

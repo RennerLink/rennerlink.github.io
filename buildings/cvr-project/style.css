@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    width: 100%;
+    max-width: 550px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+    max-width: 550px;
+    margin-top: 0;
+}
+
+.large-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.large-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 4px;
+    width: 100%;
+    max-width: 550px;
+}
+
+.image-row img {
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.bookcase {
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.bookcase .shelf {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.bookcase .shelf, .shelf-highlighted {
+    transition: height 1s ease, width 1s ease;
+}
+
+.bookcase .shelf-highlighted {
+    height: 450px;
+    width: 750px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1299px) {
+  .bookcase .shelf-highlighted {
+    width: 450px;
+}
+  @media (max-width: 1000px) {
+  .bookcase .shelf-highlighted {
+    height: 260px;
+    width: 260px;
+}
+}
+}
+
+.bookcase .shelf img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4.5px;
+}
+
+.bookcase .shelf-highlighted img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4.5px;
+}
+
+.bookcase .shelf p {
+    position: absolute;
+    left: 100%;
+    margin-left: 16px;
+    min-width: 140px;
+    color: rgba(255, 255, 255, 0);
+}
+
+.bookcase .shelf-highlighted p {
+    position: absolute;
+    left: 100%;
+    margin-left: 16px;
+    min-width: 140px;
+    color: black;
+}
