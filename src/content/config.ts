@@ -22,6 +22,6 @@ const engineering = defineCollection({
 });
 
 export const collections = {
-  animations: animations,
-  engineering: engineering
+  animations,
+  engineering
 };
