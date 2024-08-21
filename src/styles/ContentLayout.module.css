@@ -1,11 +1,10 @@
 .embed {
-  width: calc(100% - 50rem);
-  margin-left: 25rem;
-  margin-top: 2rem;
+  width: 60%;
+  margin-left: 20%; 
   border: none;
   aspect-ratio: 16 / 9;
   border-radius: 0.75rem;
-  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .md h1, .md h2, .md h3, .md h4, .md h5, .md h6 { 
@@ -17,10 +16,32 @@
   text-align: center;
   font-size: 3rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .md {
-  width: calc(100% - 50rem);
-  margin-left: 25rem;
+  width: 60%;
+  margin-left: 20%;
   font-size: 1.25rem;
+}
+
+.imgs > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+}
+
+.imgs {
+  display: grid; 
+  gap: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, calc((100% - 2rem) / 3));
+}
+
+@media screen and (width < 1450px) {
+  .imgs {
+    grid-template-columns: repeat(auto-fit, calc((100% - 1rem) / 2));
+  }
 }

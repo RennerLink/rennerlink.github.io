@@ -39,13 +39,15 @@ button {
   background: transparent;
   border: 2px #000 solid;
   border-radius: 0.25rem;
-  height: 2rem;
   cursor: pointer;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: all 0.15s ease-in-out;
 }
 
-button:active {
+button:hover {
   background: #000;
-  border: none;
   color: #fff;
 }
 </style>

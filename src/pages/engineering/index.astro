@@ -1,0 +1,20 @@
+---
+import style from '@styles/contentPage.module.css';
+import Layout from '@layouts/Layout.astro';
+import ContentCard from '@components/ContentCard.astro';
+import { getCollection } from 'astro:content';
+
+const entries = (await getCollection('engineering')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="RL Mechanical Engineering">
+  <div class={style.banner}>
+    <video autoplay loop muted>
+      <source src="/engineering/banner.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h1 class={style.title}>Mechanical Engineering</h1>
+  <div class={style.cards}>
+    {entries.map(entry => <ContentCard img={`/engineering/thumbnails/${entry.slug}.avif`} title={entry.data.title} date={entry.data.date} length={entry.data.length} alt={entry.data.alt} url={`/engineering/${entry.slug}/`} />)}
+  </div>
+</Layout>

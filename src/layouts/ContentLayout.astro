@@ -3,18 +3,23 @@ import '@fontsource-variable/plus-jakarta-sans';
 import '@styles/global.css';
 import NavBar from '@components/NavBar.astro';
 import style from '@styles/ContentLayout.module.css';
+import fs from 'node:fs';
 
 interface Props {
   frontmatter: {
     title: string,
     alt: string,
     date: Date,
-    length: number,
-    yt: string
+    length?: number,
+    yt?: string
   }
 }
 
 const { frontmatter } = Astro.props;
+
+let imgs: string[] = [];
+
+if (fs.existsSync(`./public${Astro.url.pathname}`)) imgs = fs.readdirSync(`./public${Astro.url.pathname}`).sort((a, b) => Number(a.split('.avif')[0]) - Number(b.split('.avif')[0]));
 ---
 
 <!doctype html>
@@ -32,9 +37,12 @@ const { frontmatter } = Astro.props;
     <NavBar />
     <main>
       <h1 class={style.title}>{frontmatter.title}</h1>
-      <iframe src={`https://www.youtube.com/embed/${frontmatter.yt}`} title={frontmatter.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class={style.embed} /> 
+      { frontmatter.yt != null ? <iframe src={`https://www.youtube.com/embed/${frontmatter.yt}`} title={frontmatter.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class={style.embed} /> : ''}
       <div class={style.md}>
         <slot />
+        <div class={style.imgs}>
+          {imgs.map(img => <img src={`${Astro.url.pathname}${img}`} />)}
+        </div>
       </div>
     </main>
 	</body>

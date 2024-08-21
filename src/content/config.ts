@@ -11,6 +11,17 @@ const animations = defineCollection({
   })
 });
 
+const engineering = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    alt: z.string(),
+    yt: z.string().optional()
+  })
+});
+
 export const collections = {
-  animations
+  animations: animations,
+  engineering: engineering
 };
