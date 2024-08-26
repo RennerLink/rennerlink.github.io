@@ -23,6 +23,9 @@
 }
 
 .title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Plus Jakarta Sans", sans-serif;
   text-align: center;
   margin: 45px 0;
@@ -35,7 +38,8 @@
 
 .title-section p {
   margin: 0;
-  max-width: 500px;
+  width: 100%;
+  max-width: 800px;
 }
 
 /*Back Button*/ 
@@ -46,11 +50,13 @@
 }
 
 .t-section a {
+  position: fixed;
+  left: 40px;
+  top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: max-content;
-  margin: 0 20px 0 0;
   padding: 6px 24px 6px 12px;
   border-radius: 4px;
   font-weight: 500;
@@ -76,16 +82,44 @@
 }
 
 /* --------Basic Images Grid-----------*/
-.mcgrid {
+.mcgridcontainer {
+  max-width: 800px;
+}
+
+.mcgridcontainer .mcgrid {
   margin: 0 2rem 10px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1rem;
   border-radius: 4px;
 }
 
+.mcgrid {
+  margin: 0 2rem 10px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  border-radius: 4px;
+}
+
+.mcgridcontainer .mcgriditem {
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.mcgridcontainer .mcgriditem img {
+  display: block;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .mcgriditem {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -96,6 +130,7 @@
 .mcgriditem img {
   display: block;
   height: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
@@ -108,4 +143,11 @@ a.intextlink {
 a.intextlink:hover {
   background-color: rgb(218, 218, 218);
   color: black;
+}
+
+/* Embeded Youtube Videos */
+.youtubevid {
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
