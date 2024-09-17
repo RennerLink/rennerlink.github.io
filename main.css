@@ -119,6 +119,7 @@ h1 {
   text-decoration: none;
   text-decoration-color: black;
   transform: translateX(-37px);
+  border-radius: 0 5px 5px 0;
 }
 
 .header ul a {
@@ -230,6 +231,7 @@ h1 {
   color: black;
   text-decoration: none;
   text-decoration-color: black;
+  border-radius: 5px;
 }
 
 .mobile-header.open .mobile-nav ul li:hover {
