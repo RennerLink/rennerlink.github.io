@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* <weight>: Use a value from 200 to 800 */
+body {
+    background-color: #0c0c0e;
+}
+
+.dark-pl {
+  color: white;
+  background-color: #1e1f24;
+}
+
+.banner {
+  border-radius: 8px;
+  min-height: 240px;
+  overflow: hidden;
+}
+
+.content {
+  height: 100vh;
+  padding: 30px 70px 30px 50px;
+}
+
+.title-section {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  cursor: default;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.hrz-container {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #1e1f22;
+}
+
+.gallery-menu {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 12px;
+}
+
+.gallery-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  max-width: 350px;
+}
+
+.gallery-card:hover {
+  cursor: pointer;
+  align-items: center;
+}
+
+.glass-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0);
+  transition:  0.3s;
+}
+
+.gallery-card:hover .glass-filter {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(5px);
+  --webkit-backdrop-filter: blur(5px);
+}
+
+.gallery-card img {
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.gallery-card h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 40px;
+  transform: rotate(45 degrees);
+  z-index: 3;
+}
+
+/* Gallery Image Grid */ 
+.gallery-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 26px;
+}
+.gallery-container a {
+  display: block;
+}
+.gallery-container img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/*MAIN.CSS*/
+.header {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  padding: 40px 15px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1f22;
+}
+
+.header .logo {
+  font-family: "Arimo", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.header .nav-container {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #1e1f22;
+}
+
+.header h2 {
+  margin-top: 40px;
+  margin-left: 25px;
+  font-weight: 500;
+  cursor: default;
+  color: #fff;
+}
+
+.header ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 5px;
+  font-weight: 300;
+}
+
+.header ul li {
+  padding: 10px 20px 10px 56px;
+  transition: background-color 0.14s ease;
+  background-color: #1e1f22;
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+  transform: translateX(-37px);
+  border-radius: 0 5px 5px 0;
+}
+
+.header ul a {
+  text-decoration: none;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.header ul li:hover a {
+  color: black;
+}
+
+.header ul li:hover {
+  background-color: #8ea8d1;
+  color: black;
+}
+
+.content {
+  margin-left: 230px;
+  overflow: auto;
+  padding: 30px 50px;
+  padding-right: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 525px) {
+  .header {
+    display: none;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .topbar {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 524px) {
+  .mobile-header.closed {
+    display: none;
+  }
+  .mobile-header.open {
+    display: none;
+  }
+}
+
+/*-------MOBILE HEADER------*/
+.mobile-header {
+  position: fixed;
+  width: 100vw;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+  z-index: 1000;
+}
+
+.mobile-header .hamburger img {
+  width: 20px;
+  padding-top: 50px;
+}
+
+.mobile-header .hamburger img.active {
+  display: block;
+}
+
+.mobile-header .hamburger img.not-active {
+  display: none;
+}
+
+.mobile-header.closed .mobile-nav {
+  display: none;
+}
+
+.mobile-header.open .mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  background-color: black;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.mobile-header.open .mobile-nav h2 {
+  margin-top: 40px;
+  font-weight: 500;
+  cursor: default;
+}
+
+.mobile-header.open .mobile-nav ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 5px;
+  font-weight: 300;
+}
+
+.mobile-header.open .mobile-nav ul li {
+  padding: 10px 20px 10px 20px;
+  transition: background-color 0.14s ease;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+  border-radius: 5px;
+}
+
+.mobile-header.open .mobile-nav ul li:hover {
+  background-color: #8ea8d1;
+  color: black;
+}
+
+
+.mobile-header.open .mobile-nav ul a {
+  text-decoration: none;
+}
+
+.mobile-header.open .mobile-nav .mobile-nav-fill {
+  height: 800px;
+}
+
+/* PAGE ADD */
+.page-add {
+  width: calc(100% - 7.6vw);
+  padding: 20px;
+  margin-top: 50px;
+  /*background-color: #e6a7e6;*/
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+@media screen and (min-width: 1350px) {
+    .page-add {
+      width: calc(60% - 7.6vw);
+    }
+}
+
+.page-add .pac-right {
+  min-width: 25vw;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-thumbnail {
+  height: var(--image-collection-height);
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 2px black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.page-thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.page-add .pac-right h1 {
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.page-add .pac-right p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  max-width: 200px;
+}

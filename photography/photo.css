@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 /* <weight>: Use a value from 200 to 800 */
 
-.page-loader .dark-pl {
+.dark-pl {
   color: white;
   background-color: #1e1f24;
 }
