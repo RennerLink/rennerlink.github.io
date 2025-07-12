@@ -54,6 +54,14 @@ h1 {
     margin: 4rem;
 }
 
+hr {
+    width: 400px;
+    height: 1px;
+    color: #000;
+    background-color: #000;
+    border: none;
+}
+
 .project-timeline {
     margin: 0;
     padding: 0;
@@ -106,13 +114,22 @@ h1 {
     overflow: hidden;
     border-radius: 0.5rem;
 }
+.just-image-two {
+    width: 100%;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    max-height: 400px;
+}
 
 /* PAGE LINKS */
 .courses {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 4rem;
     margin-bottom: 4rem;
 }
@@ -494,6 +511,10 @@ h1 {
     z-index: 1;
     transition: all 0.3s ease;
 }
+.collapsible label img {
+    height: 1rem;
+    margin-right: 5px;
+}
 .collapsible label:after {
     content: "";
     position: absolute;
@@ -574,6 +595,10 @@ h1 {
 }
 .image-row.large img {
     width: 60%;
+    height: auto;
+}
+.image-row.stretch img {
+    width: 100%;
     height: auto;
 }
 
@@ -728,4 +753,44 @@ h1 {
 .model-photos img {
     width: 100%;
     object-fit: contain;
+}
+
+/* GROUP FEATURE */
+.groupfeature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.groupfeature p {
+    margin: 0.6rem 0 0 0;
+}
+.groupmate {
+    background-color: #000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row; /* keep it horizontal inside */
+    align-items: center;
+    padding: 8px 16px;
+    flex: 1 1 100%; /* allow shrinking/growing */
+    margin: 1rem 0;
+}
+.groupmate .space {
+    content: '';
+    width: 1px;
+    height: 30px;
+    background-color: #fff;
+    margin: 0 15px;
+}
+.groupmate img {
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.groupmate p {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 6px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
