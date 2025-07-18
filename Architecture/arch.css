@@ -129,7 +129,7 @@ hr {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     gap: 4rem;
     margin-bottom: 4rem;
 }
