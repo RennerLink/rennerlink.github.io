@@ -25,6 +25,13 @@ h1 {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+hr {
+  width: 40%;
+  height: 2px;
+  color: #000;
+  background-color: #000;
+}
+
 .vc-content {  /*Vertically center content*/ 
   display: flex;
   justify-content: center;
@@ -71,6 +78,11 @@ h1 {
 
 .section .text h2 {
   margin: 0;
+}
+
+.title-section iframe {
+  margin-bottom: 2em;
+  border-radius: 4px;
 }
 
 .header {
@@ -138,7 +150,7 @@ h1 {
 }
 
 .header ul li:hover {
-  background-color: #3C5377;
+  background-color: #000;
   color: white;
 }
 
@@ -237,7 +249,7 @@ h1 {
 }
 
 .mobile-header.open .mobile-nav ul li:hover {
-  background-color: #3C5377;
+  background-color: #000;
   color: white;
 }
 
@@ -356,7 +368,7 @@ h1 {
 .loader::after {
   content: "";
   grid-area: 1/1;
-  background: #3C5377;
+  background: #000;
   clip-path: polygon(0 0,101% 0, 0 100%);
   animation: l13 2s infinite;
 }
@@ -707,6 +719,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(675px, 1fr));
   column-gap: 50px;
   padding: 75px 0;
+  padding-bottom: 0;
   /* background-color: aliceblue; */
 }
 @media only screen and (max-width: 900px) {
@@ -843,6 +856,72 @@ h1 {
 .mobile-portal .text p span {
   font-size: 1.2em;
   font-weight: 800;
+}
+
+/* FEATURED PORTALS  */
+.featured-container {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  /* background-color: rgb(255, 197, 255); */
+}
+.featured-portal {
+  width: 200px;
+  height: 250px;
+  cursor: pointer;
+  /* background-color: rgb(204, 204, 255); */
+}
+.featured-portal img {
+  z-index: -10;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  clip-path: polygon(
+    50% 0%, 100% 50%, 50% 100%, 0% 50%
+  );
+  /* background-color: rgb(255, 207, 119); */
+  transition: 0.6s ease;
+}
+.featured-portal:hover img {
+  border-radius: 4px;
+  clip-path: polygon(0% 0%, 200px 0%, 200px 200px, 0% 200px);
+  transform: translateY(-50px);
+}
+.featured-portal p {
+  z-index: 0;
+  font-weight: 600;
+  text-align: center;
+  background-color: white;
+  padding: 25px 20px 30px 20px;
+  transform: translateY(-65px);
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.5s ease-in;
+}
+.featured-portal:hover p {
+  background-color: #000;
+  color: #fff;
+}
+.featured-portal p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 120px;
+  height: 8px;
+  color: #000;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: 0.25s ease;
+}
+
+.featured-portal:hover p::before {
+  opacity: 0;
 }
 
 /*.box-container {
