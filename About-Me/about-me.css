@@ -116,7 +116,15 @@
 }
 
 .contactleft p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-top: 30px;
+}
+.contactleft img {
+  height: 2em;
+  aspect-ratio: 1 / 1;
+  margin-right: 12px;
 }
 
 .contactleft p i {

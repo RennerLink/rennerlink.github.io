@@ -33,7 +33,7 @@
   font-family: "Plus Jakarta Sans", sans-serif;
   text-align: center;
   max-width: 530px;
-  margin-top: 40px;
+  /* margin-top: 1.75rem; */
   margin-bottom: 20px;
 }
 
@@ -146,4 +146,63 @@
 
 .image-indicator span.active {
   background-color: #0c236e;
+}
+
+/* B Items */
+.bitem {
+  max-width: 750px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bitem .img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex: 1;
+  gap: 4px;
+  /* background-color: rgb(157, 157, 201); */
+}
+.bitem .img-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  /* overflow: hidden; */
+}
+.bitem:hover .img-grid img {
+  opacity: 0.95;
+}
+.bitem .txt {
+  flex: 1;
+  margin-left: 3em;
+  /* background-color: rgb(148, 218, 148); */
+}
+
+.bitem .txt a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: #000;
+}
+.bitem .txt a img {
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  margin-left: 4px;
+}
+.bitem:hover .txt a {
+  padding-right: 22px;
+  background-color: #292929;
+}
+.bitem .txt:hover a {
+  background-color: #3f3f3f;
+}
+.bitem .txt a:hover {
+  background-color: #5b5b5b;
+}
+.bitem:hover .txt a img {
+  transform: translateX(10px);
 }

@@ -673,7 +673,7 @@ hr {
   justify-content: flex-start;
   align-items: center;
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Adjust shadow as needed */
   border-radius: 8px;
   width: 400px; /* You can adjust the card width as needed */
   aspect-ratio: 2 / 1; /* Aspect ratio of 1/2 horizontally, adjust as needed */
